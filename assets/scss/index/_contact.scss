@@ -1,0 +1,148 @@
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact {
+
+  .map {
+    margin-bottom: 40px;
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 400px;
+    }
+  }
+
+  .info {
+    padding: 40px;
+    box-shadow: 0px 2px 15px rgba(var(--color-black-rgb), .1);
+    overflow: hidden;
+    h3 {
+      font-weight: 600;
+      font-size: 24px;
+    }
+    p {
+      color: var(--color-secondary-light);
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+  }
+
+  .info-item {
+
+    & + .info-item {
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 1px solid rgba(var(--color-secondary-rgb), .15);
+    }
+
+    i {
+      font-size: 24px;
+      color: var(--color-primary);
+      transition: all 0.3s ease-in-out;
+      margin-right: 20px;
+    }
+
+    h4 {
+      padding: 0;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: var(--color-secondary);
+    }
+
+    p {
+      padding: 0;
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--color-secondary-light);
+    }
+  }
+
+
+  .php-email-form {
+    width: 100%;
+    background: var(--color-white);
+
+    .form-group {
+      padding-bottom: 8px;
+    }
+    
+    .error-message {
+      display: none;
+      color: var(--color-white);
+      background: var(--color-red);
+      text-align: left;
+      padding: 15px;
+      font-weight: 600;
+      & br + br {
+        margin-top: 25px;
+      }
+    }
+    
+    .sent-message {
+      display: none;
+      color: var(--color-white);
+      background: var(--color-green);
+      text-align: center;
+      padding: 15px;
+      font-weight: 600;
+    }
+  
+    .loading {
+      display: none;
+      background: var(--color-white);;
+      text-align: center;
+      padding: 15px;
+  
+      &:before {
+        content: "";
+        display: inline-block;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        margin: 0 10px -6px 0;
+        border: 3px solid var(--color-green);
+        border-top-color: var(--color-white);
+        animation: animate-loading 1s linear infinite;
+      }
+  
+    }
+
+    input[type="text"], input[type="email"], textarea {
+      border-radius: 0px;
+      box-shadow: none;
+      font-size: 14px;
+      &:focus {
+        border-color: var(--color-secondary-light);
+      }
+    }
+
+    input[type="text"], input[type="email"] {
+      height: 48px;
+      padding: 10px 15px;
+    }
+
+    textarea {
+      padding: 10px 12px;
+      height: 290px;
+    }
+
+    button[type="submit"] {
+      background: var(--color-primary);
+      border: 0;
+      padding: 13px 50px;
+      color: var(--color-white);
+      transition: 0.4s;
+      border-radius: 0;
+      &:hover {
+        background: rgba(var(--color-primary-rgb), .85);
+      }
+    }
+  
+  }
+
+  @keyframes animate-loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}

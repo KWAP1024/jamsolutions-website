@@ -1,0 +1,112 @@
+/*--------------------------------------------------------------
+# Portfolio Section
+--------------------------------------------------------------*/
+.portfolio {
+
+  .portfolio-flters {
+    padding:0;
+    margin:0 auto 30px auto;
+    list-style:none;
+    text-align:center;
+
+    li {
+      cursor: pointer;
+      display: inline-block;
+      padding: 0;
+      font-size: 18px;
+      font-weight: 300;
+      margin: 0 10px;
+      line-height: 1;
+      margin-bottom: 5px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover, &.filter-active {
+        color: var(--color-primary);
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @media (max-width: 575px) {
+        font-size: 14px;
+        margin: 0 5px;
+      }
+    }
+  }
+
+  .portfolio-item {
+    position: relative;
+    border: 1px solid var(--color-white);
+    overflow: hidden;
+    z-index: 1;
+
+    img {
+      transition: all 0.3s;
+    }
+
+    &:before {
+      content: "";
+      inset: 0;
+      position: absolute;
+      background: rgba(var(--color-secondary-rgb), .8);
+      z-index: 2;
+      transition:  0.5s;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .portfolio-info {
+      opacity: 0;
+      position: absolute;
+      inset: auto 40px 40px 40px;
+      z-index: 3;
+      transition: all ease-in-out 0.3s;
+      padding: 20px;
+
+      h4 {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--color-white);
+        padding-right: 50px;
+      }
+
+      .preview-link, .details-link {
+        position: absolute;
+        right: 50px;
+        font-size: 24px;
+        top: calc(50% - 14px);
+        color: rgba(var(--color-white-rgb), .7);
+        transition: 0.3s;
+        line-height: 0;
+        &:hover {
+          color: var(--color-white);
+        }
+      }
+
+      .details-link {
+        right: 14px;
+        font-size: 28px;
+      }
+      
+    }
+
+    &:hover {
+      &:before {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      img {
+        transform: scale(1.2);
+      }
+      .portfolio-info {
+        opacity: 1;
+        inset: auto 10px 0 10px;
+      }
+    }
+  }
+}

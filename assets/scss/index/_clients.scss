@@ -1,0 +1,17 @@
+/*--------------------------------------------------------------
+# Clients Section
+--------------------------------------------------------------*/
+.clients {
+  padding: 0 0 60px 0;
+  .swiper-slide {
+    img {
+      opacity: 0.5;
+      transition: 0.3s;
+      filter: grayscale(100);
+      &:hover {
+        filter: none;
+        opacity: 1;
+      }
+    }
+  }
+}
