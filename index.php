@@ -24,6 +24,7 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/carousel.css">
 
   <!-- Variables CSS Files. Uncomment your preferred color scheme -->
   <link href="assets/css/variables.css" rel="stylesheet">
@@ -106,26 +107,28 @@
     </div>
   </header><!-- End Header -->
 
+
+
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="hero carousel  carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+  <!-- <section id="hero" class="hero carousel  carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
     <div class="carousel-item active">
       <div class="container">
         <div class="row justify-content-center gy-6">
 
-          <div class="col-lg-5 col-md-8">
-            <img src="assets/img/hero-carousel/hero-carousel-1.svg" alt="" class="img-fluid img">
+          <div class="col-lg-5 col-md-12">
+            <img src="assets/img/newpicha/ok.jpg" alt="" class="img-fluid img">
           </div>
 
           <div class="col-lg-9 text-center">
-            <h2>Welcome to HeroBiz</h2>
+            <h2>Welcome to Jam Solutions</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <a href="#featured-services" class="btn-get-started scrollto ">Get Started</a>
           </div>
 
         </div>
       </div>
-    </div><!-- End Carousel Item -->
+    </div>
 
     <div class="carousel-item">
       <div class="container">
@@ -143,7 +146,7 @@
 
         </div>
       </div>
-    </div><!-- End Carousel Item -->
+    </div>
 
     <div class="carousel-item">
       <div class="container">
@@ -161,7 +164,7 @@
 
         </div>
       </div>
-    </div><!-- End Carousel Item -->
+    </div>
 
     <a class="carousel-control-prev" href="#hero" role="button" data-bs-slide="prev">
       <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
@@ -173,7 +176,75 @@
 
     <ol class="carousel-indicators"></ol>
 
-  </section><!-- End Hero Section -->
+  </section> -->
+
+  <!-- New Carousel -->
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" /> -->
+
+        <img src="./assets/img/newpicha/ok.jpg" alt="" srcset="">
+        </svg>
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Example headline.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <rect width="100%" height="100%" fill="#777" />
+        </svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <rect width="100%" height="100%" fill="#777" />
+        </svg>
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+
+
+
+
 
   <main id="main">
 
@@ -189,7 +260,7 @@
               <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>
               <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="200">
             <div class="service-item position-relative">
@@ -197,7 +268,7 @@
               <h4><a href="" class="stretched-link">Sed ut perspici</a></h4>
               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
             <div class="service-item position-relative">
@@ -205,7 +276,7 @@
               <h4><a href="" class="stretched-link">Magni Dolores</a></h4>
               <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="600">
             <div class="service-item position-relative">
@@ -213,12 +284,12 @@
               <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
               <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
         </div>
 
       </div>
-    </section><!-- End Featured Services Section -->
+    </section>
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -1277,7 +1348,7 @@
       </div>
 
     </section>
-    
+
 
 
     <section id="contact" class="contact">
@@ -1293,7 +1364,7 @@
       <div class="map">
         <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe> -->
 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.370663864793!2d39.21097691434628!3d-6.724546395138602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c5130a5d83dd1%3A0x4f63cc7b13e4d6e6!2sClassic%20Mall%2C%20Mbezi%20Beach!5e0!3m2!1sen!2stz!4v1668517362669!5m2!1sen!2stz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.370663864793!2d39.21097691434628!3d-6.724546395138602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c5130a5d83dd1%3A0x4f63cc7b13e4d6e6!2sClassic%20Mall%2C%20Mbezi%20Beach!5e0!3m2!1sen!2stz!4v1668517362669!5m2!1sen!2stz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
       </div>
@@ -1369,7 +1440,6 @@
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
     <div class="footer-content">
@@ -1380,10 +1450,10 @@
             <div class="footer-info">
               <h3>JAMSOLUTIONS</h3>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                <a href="https://www.google.com/maps/place/Classic+Mall,+Mbezi+Beach/@-6.7245464,39.2131656,17z/data=!3m1!4b1!4m5!3m4!1s0x185c5130a5d83dd1:0x4f63cc7b13e4d6e6!8m2!3d-6.7245464!4d39.2131656" target="_blank" rel="noopener noreferrer"> Mbezi Beach, Classic Mall, Jam Solutions Company Limited </a><br><br>
+                <strong>Phone:</strong> <a href="tel:+255 755 530 328">+255 755 530 328</a>
+                <a href="tel:+255 714 932 225"> / +255 714 932 225</a><br>
+                <strong>Email:</strong> <a href="mailto: info@jamsolutions.co.tz">info@jamsolutions.co.tz</a> <br>
               </p>
             </div>
           </div>
@@ -1428,27 +1498,27 @@
 
         <div class="d-flex flex-column align-items-center align-items-lg-start">
           <div class="copyright">
-            &copy; Copyright <strong><span>Jam Solutions Company Limited</span></strong>. All Rights Reserved
+            &copy; <?php echo date('Y'); ?> Copyright <strong><span>Jam Solutions Company Limited </span></strong>. All Rights Reserved
           </div>
-          
+
         </div>
 
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
           <a href="https://twitter.com/SolutionsJam" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
-          <a href="#" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.instagram.com/jam_solutions_ltd/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
           <a href="https://www.linkedin.com/in/jam-solutions-91a270257/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
         </div>
 
       </div>
     </div>
 
-  </footer><!-- End Footer -->
+  </footer>
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
+
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -1456,7 +1526,7 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
+
   <script src="assets/js/main.js"></script>
 
 </body>
