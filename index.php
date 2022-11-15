@@ -1276,22 +1276,27 @@
 
       </div>
 
-    </section><!-- End Recent Blog Posts Section -->
+    </section>
+    
 
-    <!-- ======= Contact Section ======= -->
+
     <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-header">
           <h2>Contact Us</h2>
-          <p>Ea vitae aspernatur deserunt voluptatem impedit deserunt magnam occaecati dssumenda quas ut ad dolores adipisci aliquam.</p>
+          <p>Please feel free to call us anytime</p>
         </div>
 
       </div>
 
       <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
-      </div><!-- End Google Maps -->
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe> -->
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.370663864793!2d39.21097691434628!3d-6.724546395138602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c5130a5d83dd1%3A0x4f63cc7b13e4d6e6!2sClassic%20Mall%2C%20Mbezi%20Beach!5e0!3m2!1sen!2stz!4v1668517362669!5m2!1sen!2stz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+      </div>
 
       <div class="container">
 
@@ -1301,31 +1306,32 @@
 
             <div class="info">
               <h3>Get in touch</h3>
-              <p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.</p>
+              <!-- <p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.</p> -->
 
               <div class="info-item d-flex">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h4>Location:</h4>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <p><a href="https://www.google.com/maps/place/Classic+Mall,+Mbezi+Beach/@-6.7245464,39.2131656,17z/data=!3m1!4b1!4m5!3m4!1s0x185c5130a5d83dd1:0x4f63cc7b13e4d6e6!8m2!3d-6.7245464!4d39.2131656" target="_blank" rel="noopener noreferrer"> Mbezi Beach, Classic Mall, Jam Solutions Company Limited </a> </p>
                 </div>
-              </div><!-- End Info Item -->
+              </div>
 
               <div class="info-item d-flex">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h4>Email:</h4>
-                  <p>info@example.com</p>
+                  <p> <a href="mailto: info@jamsolutions.co.tz">info@jamsolutions.co.tz</a> </p>
                 </div>
-              </div><!-- End Info Item -->
+              </div>
 
               <div class="info-item d-flex">
                 <i class="bi bi-phone flex-shrink-0"></i>
                 <div>
                   <h4>Call:</h4>
-                  <p>+1 5589 55488 55</p>
+                  <p> <a href="tel:+255 755 530 328">+255 755 530 328</a> </p>
+                  <p> <a href="tel:+255 714 932 225">+255 714 932 225</a> </p>
                 </div>
-              </div><!-- End Info Item -->
+              </div>
 
             </div>
 
@@ -1372,7 +1378,7 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>HeroBiz</h3>
+              <h3>JAMSOLUTIONS</h3>
               <p>
                 A108 Adam Street <br>
                 NY 535022, USA<br><br>
@@ -1422,17 +1428,15 @@
 
         <div class="d-flex flex-column align-items-center align-items-lg-start">
           <div class="copyright">
-            &copy; Copyright <strong><span>HeroBiz</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>Jam Solutions Company Limited</span></strong>. All Rights Reserved
           </div>
           
         </div>
 
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          <a href="https://twitter.com/SolutionsJam" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/jam-solutions-91a270257/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
         </div>
 
       </div>
