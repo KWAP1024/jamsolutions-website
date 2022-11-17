@@ -29,30 +29,87 @@ include('./head.php');
       <div class="row">
 
         <!-- Left side columns -->
-        <div class="col-lg-8">
+        <div class="col-lg-12">
           <div class="row">
 
-            <!-- Sales Card -->
-
-            <a href="./carousel.php">
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
-                <div class="card-body">
-                  <h5 class="card-title">Carousel </h5>
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                    <i class="ri-camera-switch-line"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>145</h6>
+            <!-- Carousel Card -->
+            <div class="col-xxl-4 col-md-3">
+              <a href="./carousel.php">
+                <div class="card info-card sales-card">
+                  <div class="card-body">
+                    <h5 class="card-title">Carousel </h5>
+                    <div class="d-flex align-items-center">
+                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="ri-camera-switch-line"></i>
+                      </div>
+                      <div class="ps-3">
+                        <h6>145</h6>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-            </a>
 
-           
+            <!-- Client Card -->
+            <div class="col-xxl-4 col-md-3">
+              <a href="./client.php">
+                <div class="card info-card sales-card">
+                  <div class="card-body">
+                    <h5 class="card-title">Client </h5>
+                    <div class="d-flex align-items-center">
+                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="ri-admin-line"></i>
+                      </div>
+                      <div class="ps-3">
+                        <h6>145</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Team Card -->
+            <div class="col-xxl-4 col-md-3">
+              <a href="./team.php">
+                <div class="card info-card sales-card">
+                  <div class="card-body">
+                    <h5 class="card-title">Team </h5>
+                    <div class="d-flex align-items-center">
+                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="ri-team-line"></i>
+                      </div>
+                      <div class="ps-3">
+                        <h6>145</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Project Card -->
+            <div class="col-xxl-4 col-md-3">
+              <a href="./project.php">
+                <div class="card info-card sales-card">
+                  <div class="card-body">
+                    <h5 class="card-title">Project </h5>
+                    <div class="d-flex align-items-center">
+                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                        <i class="ri-book-2-line"></i>
+                      </div>
+                      <div class="ps-3">
+                        <h6>145</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+
+
 
 
           </div>

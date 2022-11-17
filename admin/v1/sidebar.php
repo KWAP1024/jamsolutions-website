@@ -31,9 +31,9 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link " href="gallery.php">
+      <a class="nav-link " href="project.php">
         <i class="bi bi-grid"></i>
-        <span>Gallery</span>
+        <span>Projects</span>
       </a>
     </li>
 

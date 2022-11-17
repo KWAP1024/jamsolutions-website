@@ -103,7 +103,7 @@
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Welcome to <span>JAMSolutions</span></h2>
                 <p class="animate__animated animate__fadeInUp">QSS are the three pillars, the foundation of business in any Airline. We have developed a vast information system for Quality, Safety and Security for PrecisionAir Tanzania Ltd.</p>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                  
               </div>
             </div>
           </div>
@@ -114,7 +114,7 @@
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Freight Management & Information System</h2>
                 <p class="animate__animated animate__fadeInUp">We tailored a Freight management system for TAZARA Railway, the robust and detailed platform allows user to access critical tasks dealing with the management of freight services.</p>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                  
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Safety Management Systems (SMS) for Rail Operations</h2>
                 <p class="animate__animated animate__fadeInUp">We designed an SMS for TAZARA, a structured process that obligates organizations to manage safety with the same level of priority that other core business processes are managed.</p>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                  
               </div>
             </div>
           </div>
@@ -136,7 +136,7 @@
               <div class="carousel-content container">
                 <h2 class="animate__animated animate__fadeInDown">Human Resources Management System (HRM)</h2>
                 <p class="animate__animated animate__fadeInUp">Our HRM services and products are customizeable to meet customer satisfactions. We always give our very best to meet and exceed the high expectations of our customers.</p>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                  
               </div>
             </div>
           </div>
@@ -144,10 +144,10 @@
         </div>
 
         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+          <!-- <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span> -->
         </a>
         <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+          <!-- <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span> -->
         </a>
 
       </div>
