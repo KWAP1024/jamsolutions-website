@@ -12,11 +12,14 @@ while ($ret = mysqli_fetch_array($result)) {
     // }
 
 
-    echo "ID = ".$fo++."<br>";
+    echo "ID = " . $fo++ . "<br>";
     echo "Big Text = " . $bigtext . "<br>";
     echo "Explain Text = " . $explaintext . "<br>";
-    echo "The Photo = " . $photo . "<br>";
+
 ?>
+
+    <img src="./carousel/<?php echo $photo; ?>" alt="" srcset=""> <br>
+
     <br>
 <?php
 }

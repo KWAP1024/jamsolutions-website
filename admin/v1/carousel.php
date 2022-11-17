@@ -26,7 +26,7 @@ include('./head.php');
                         <div class="card-body">
                             <h5 class="card-title">Carousel Section <span style="color: green; margin-left: 6cm;"><b><?php include('./carouseldata.php'); ?></b></span> </h5>
 
-                            <form method="post">
+                            <form method="post" enctype="multipart/form-data">
                                 <div class="row mb-3">
                                     <label for="inputText" class="col-sm-2 col-form-label">Big Text</label>
                                     <div class="col-sm-10">
