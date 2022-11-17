@@ -8,7 +8,6 @@ include('./head.php');
   include('./navbar.php');
   ?>
 
-
   <?php
   include('./sidebar.php');
   ?>
