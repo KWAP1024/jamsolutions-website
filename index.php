@@ -2,8 +2,13 @@
 
 include("./database/connect.php");
 
+// Carousel
 $query = "SELECT * FROM carousel";
 $result = mysqli_query($conn, $query);
+
+// Clients
+$client = "SELECT * FROM client";
+$clientquery = mysqli_query($conn, $client);
 ?>
 
 <!DOCTYPE html>
@@ -54,10 +59,9 @@ $result = mysqli_query($conn, $query);
         <i class="bi bi-phone-fill phone-icon"></i> +255 755 530 328 / 714 932 225
       </div>
       <div class="social-links d-none d-md-block">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a target="_blank" href="https://twitter.com/SolutionsJam" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a target="_blank" href="https://www.instagram.com/jam_solutions_ltd/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/jam-solutions-91a270257/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
     </div>
   </section>
@@ -67,9 +71,9 @@ $result = mysqli_query($conn, $query);
     <div class="container d-flex align-items-center">
 
       <div class="logo me-auto">
-        <!-- <h1><a href="index.html">Mamba</a></h1> -->
+        <!-- <h1><a href="index.php">Mamba</a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+        <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -77,7 +81,7 @@ $result = mysqli_query($conn, $query);
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Gallery</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#portfolio">Projects</a></li> -->
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
@@ -125,7 +129,7 @@ $result = mysqli_query($conn, $query);
 
       </div>
     </div>
-  </section><!-- End Hero -->
+  </section>
 
   <main id="main">
 
@@ -136,7 +140,6 @@ $result = mysqli_query($conn, $query);
         <div class="row no-gutters">
           <div class="col-lg-6 video-box">
             <img src="assets/img/mixed-programers-team-working-group-project-multiple-screens-showing-running-code-it-startup-office-coder-pointing-pencil-computer-screen-with-software-compiling-code (3).jpg" class="img-fluid" alt="">
-            <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a> -->
           </div>
 
           <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
@@ -157,21 +160,14 @@ $result = mysqli_query($conn, $query);
               <h4 class="title"><a href="">Vission</a></h4>
               <p class="description">To be the most preferred consulting firm in Tanzania and at international level at large.</p>
             </div>
-
           </div>
         </div>
-
       </div>
-    </section><!-- End About Us Section -->
-
-
-
-
+    </section>
 
     <!-- ======= Counts Section ======= -->
     <section class="counts section-bg">
       <div class="container">
-
         <div class="row">
           <div class="section-title">
             <h2>CORE VALUES</h2>
@@ -228,12 +224,11 @@ $result = mysqli_query($conn, $query);
         </div>
 
       </div>
-    </section><!-- End Counts Section -->
+    </section>
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
           <h2>Our Services</h2>
         </div>
@@ -307,50 +302,27 @@ $result = mysqli_query($conn, $query);
         <div class="carousel-item active">
           <div class="container">
             <div class="row">
-              <div class="col-lg-4">
-                <div class="card">
-                  <img src="assets/img/clients/precision1.jpg" class="card-img-top" alt="Waterfall" />
-                  <div class="card-body">
-                    <br><br><br><br>
-                    <h5 class="card-title">Precision Air</h5>
 
-                    <!-- <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk
-                of the card's content.
-              </p> -->
-                    <!-- <a href="#!" class="btn btn-primary">Button</a> -->
+              <?php
+              while ($retclient = mysqli_fetch_array($clientquery)) {
+                $name = $retclient['name'];
+                $photoclient = $retclient['photo'];
+              ?>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="card">
+                    <img style="width: 100%; height: 200px;" src="./admin/v1/client/<?php echo $photoclient ?>" class="card-img-top" alt="<?php echo $name . "'s Photo" ?>" />
+                    <div class="card-body">
+                      <h5 class="card-title"><?php echo $name ?></h5>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="col-lg-4 d-none d-lg-block">
-                <div class="card">
-                  <img src="assets/img/clients/tzr2.png" class="card-img-top" alt="Sunset Over the Sea" />
-                  <div class="card-body">
-                    <br><br>
-                    <h5 class="card-title">TZR</h5>
-                    <!-- <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk
-                of the card's content.
-              </p> -->
-                    <!-- <a href="#!" class="btn btn-primary">Button</a> -->
-                  </div>
-                </div>
-              </div>
+              <?php
+              }
+              ?>
 
-              <div class="col-lg-4 d-none d-lg-block">
-                <div class="card">
-                  <img src="assets/img/clients/gpsa 2.jpg" class="card-img-top" alt="Sunset over the Sea" />
-                  <div class="card-body">
-                    <h5 class="card-title">GPSA</h5>
-                    <!-- <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk
-                of the card's content.
-              </p> -->
-                    <!-- <a href="#!" class="btn btn-primary">Button</a> -->
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -491,15 +463,14 @@ $result = mysqli_query($conn, $query);
         </div>
 
       </div>
-    </section><!-- End Our Team Section -->
+    </section>
 
     <!-- ======= Our Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
+    <!-- <section id="portfolio" class="portfolio section-bg">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="section-title">
           <h2>Our Projects</h2>
-          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
         </div>
 
         <div class="row">
@@ -523,7 +494,7 @@ $result = mysqli_query($conn, $query);
                 <p>App</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="portfolio-details.php" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -537,7 +508,7 @@ $result = mysqli_query($conn, $query);
                 <p>Web</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="portfolio-details.php" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -551,7 +522,7 @@ $result = mysqli_query($conn, $query);
                 <p>App</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="portfolio-details.php" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -565,7 +536,7 @@ $result = mysqli_query($conn, $query);
                 <p>Card</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="portfolio-details.php" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -579,7 +550,7 @@ $result = mysqli_query($conn, $query);
                 <p>Web</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="portfolio-details.php" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -593,7 +564,7 @@ $result = mysqli_query($conn, $query);
                 <p>App</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="portfolio-details.php" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -607,7 +578,7 @@ $result = mysqli_query($conn, $query);
                 <p>Card</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="portfolio-details.php" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -621,7 +592,7 @@ $result = mysqli_query($conn, $query);
                 <p>Card</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="portfolio-details.php" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -635,7 +606,7 @@ $result = mysqli_query($conn, $query);
                 <p>Web</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="portfolio-details.php" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -644,7 +615,7 @@ $result = mysqli_query($conn, $query);
         </div>
 
       </div>
-    </section><!-- End Our Portfolio Section -->
+    </section> -->
 
 
 
@@ -729,11 +700,9 @@ $result = mysqli_query($conn, $query);
               <strong>Email:</strong> info@jamsolutions.com<br>
             </p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a target="_blank" href="https://twitter.com/SolutionsJam" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a target="_blank" href="https://www.instagram.com/jam_solutions_ltd/" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/in/jam-solutions-91a270257/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>
 
@@ -748,7 +717,7 @@ $result = mysqli_query($conn, $query);
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <!-- <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
@@ -757,13 +726,13 @@ $result = mysqli_query($conn, $query);
               <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
             </ul>
-          </div>
+          </div> -->
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
             <p>Write us your email to not miss our recent posts</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input type="submit" disabled value="Subscribe">
             </form>
 
           </div>

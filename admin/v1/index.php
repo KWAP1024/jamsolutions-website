@@ -82,26 +82,28 @@ include('./head.php');
                         <i class="ri-admin-line"></i>
                       </div>
                       <div class="ps-3">
-                        <h6>145</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <!-- Team Card -->
-            <div class="col-xxl-4 col-md-3">
-              <a href="./team.php">
-                <div class="card info-card sales-card">
-                  <div class="card-body">
-                    <h5 class="card-title">Team </h5>
-                    <div class="d-flex align-items-center">
-                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                        <i class="ri-team-line"></i>
-                      </div>
-                      <div class="ps-3">
-                        <h6>145</h6>
+                        <h6>
+                        <?php
+                          $query = "select count(id) from client";
+                          $userid = mysqli_query($conn, $query);
+                          if ($userid) {
+                            while ($row = mysqli_fetch_assoc($userid)) {
+                            }
+                            $query2 = "select count(id) from client";
+                            $job = mysqli_query($conn, $query2);
+                            if ($job) {
+                              $row2 = mysqli_fetch_array($job);
+                              if ($row2) {
+                                echo $row2[0];
+                              } else {
+                                echo "No User";
+                              }
+                            } else {
+                              echo "Query failed";
+                            }
+                          }
+                          ?>
+                        </h6>
                       </div>
                     </div>
                   </div>
