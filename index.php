@@ -1,3 +1,11 @@
+<?php
+
+include("./database/connect.php");
+
+$query = "SELECT * FROM carousel";
+$result = mysqli_query($conn, $query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,21 +36,12 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-<!-- Font Awesome -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  rel="stylesheet"
-/>
-<!-- Google Fonts -->
-<link
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-  rel="stylesheet"
-/>
-<!-- MDB -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css"
-  rel="stylesheet"
-/>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -95,53 +94,27 @@
 
         <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
-        <div class="carousel-inner" role="listbox">
-
-          <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url('assets/img/slide/shak_1920x1080.png');">
-            <div class="carousel-container">
-              <div class="carousel-content container">
-                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>JAMSolutions</span></h2>
-                <p class="animate__animated animate__fadeInUp">QSS are the three pillars, the foundation of business in any Airline. We have developed a vast information system for Quality, Safety and Security for PrecisionAir Tanzania Ltd.</p>
-                  
+        <?php
+        while ($ret = mysqli_fetch_array($result)) {
+          $bigtext = $ret['bigtext'];
+          $explaintext = $ret['explaintext'];
+          $photo = $ret['photo'];
+        ?>
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active" style="background-image: url('./admin/v1/carousel/<?php echo $photo ?>');">
+              <div class="carousel-container">
+                <div class="carousel-content container">
+                  <h2 class="animate__animated animate__fadeInDown"><span><?php echo $bigtext; ?></span></h2>
+                  <p class="animate__animated animate__fadeInUp"><?php echo $explaintext ?></p>
+                </div>
               </div>
             </div>
           </div>
+        <?php
+        }
+        ?>
 
-          <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url('assets/img/slide/loco_1920x1080.png');">
-            <div class="carousel-container">
-              <div class="carousel-content container">
-                <h2 class="animate__animated animate__fadeInDown">Freight Management & Information System</h2>
-                <p class="animate__animated animate__fadeInUp">We tailored a Freight management system for TAZARA Railway, the robust and detailed platform allows user to access critical tasks dealing with the management of freight services.</p>
-                  
-              </div>
-            </div>
-          </div>
 
-          <!-- Slide 3 -->
-          <div class="carousel-item" style="background-image: url('assets/img/slide/safety_1920x1080.png');">
-            <div class="carousel-container">
-              <div class="carousel-content container">
-                <h2 class="animate__animated animate__fadeInDown">Safety Management Systems (SMS) for Rail Operations</h2>
-                <p class="animate__animated animate__fadeInUp">We designed an SMS for TAZARA, a structured process that obligates organizations to manage safety with the same level of priority that other core business processes are managed.</p>
-                  
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="carousel-item" style="background-image: url('assets/img/slide/hrm_1920x1080.png');">
-            <div class="carousel-container">
-              <div class="carousel-content container">
-                <h2 class="animate__animated animate__fadeInDown">Human Resources Management System (HRM)</h2>
-                <p class="animate__animated animate__fadeInUp">Our HRM services and products are customizeable to meet customer satisfactions. We always give our very best to meet and exceed the high expectations of our customers.</p>
-                  
-              </div>
-            </div>
-          </div>
-
-        </div>
 
         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
           <!-- <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span> -->
@@ -191,23 +164,25 @@
       </div>
     </section><!-- End About Us Section -->
 
-    
 
-    
+
+
 
     <!-- ======= Counts Section ======= -->
     <section class="counts section-bg">
       <div class="container">
-         
+
         <div class="row">
-            <div class="section-title">
-                <h2>CORE VALUES</h2>
-              </div>
+          <div class="section-title">
+            <h2>CORE VALUES</h2>
+          </div>
           <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
             <div class="count-box">
               <i class="bi bi-simple-smile" style="color: #20b38e;"></i>
               <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <strong><p>Quality</p></strong>
+              <strong>
+                <p>Quality</p>
+              </strong>
               <p>Expect nothing but quality and competitive
                 services when you decide to work with us.</p>
             </div>
@@ -217,7 +192,9 @@
             <div class="count-box">
               <i class="bi bi-document-folder" style="color: #c042ff;"></i>
               <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <strong><p>Integrity</p></strong>
+              <strong>
+                <p>Integrity</p>
+              </strong>
               <p>Our staff are loyal and practice at utmost integrity
                 to assist the growth of your business.</p>
             </div>
@@ -227,8 +204,10 @@
             <div class="count-box">
               <i class="bi bi-live-support" style="color: #46d1ff;"></i>
               <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <strong><p>Customer
-                Focus</p></strong>
+              <strong>
+                <p>Customer
+                  Focus</p>
+              </strong>
               <p>You need only a one-call for us to access you.</p>
             </div>
           </div>
@@ -237,8 +216,10 @@
             <div class="count-box">
               <i class="bi bi-users-alt-5" style="color: #ffb459;"></i>
               <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <strong><p>Guarantee
-                Satisfication</p></strong>
+              <strong>
+                <p>Guarantee
+                  Satisfication</p>
+              </strong>
               <p>We live by satisfy our customers so as to attain
                 mutual beneficial relationships.</p>
             </div>
@@ -313,86 +294,74 @@
     </section><!-- End Services Section -->
 
     <!-- Carousel wrapper -->
-<div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
-<!-- Controls -->
-<div class="d-flex justify-content-center mb-4">
-  <div class="section-title">
-    <h2>Our Clients</h2>
-  </div>
-</div>
-<!-- Inner -->
-<div class="carousel-inner py-4">
-  <!-- Single item -->
-  <div class="carousel-item active">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="card">
-            <img
-              src="assets/img/clients/precision1.jpg"
-              class="card-img-top"
-              alt="Waterfall"
-            />
-            <div class="card-body">
-              <br><br><br><br>
-              <h5 class="card-title">Precision Air</h5>
-              
-              <!-- <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk
-                of the card's content.
-              </p> -->
-              <!-- <a href="#!" class="btn btn-primary">Button</a> -->
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 d-none d-lg-block">
-          <div class="card">
-            <img
-              src="assets/img/clients/tzr2.png"
-              class="card-img-top"
-              alt="Sunset Over the Sea"
-            />
-            <div class="card-body">
-              <br><br>
-              <h5 class="card-title">TZR</h5>
-              <!-- <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk
-                of the card's content.
-              </p> -->
-              <!-- <a href="#!" class="btn btn-primary">Button</a> -->
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 d-none d-lg-block">
-          <div class="card">
-            <img
-              src="assets/img/clients/gpsa 2.jpg"
-              class="card-img-top"
-              alt="Sunset over the Sea"
-            />
-            <div class="card-body">
-              <h5 class="card-title">GPSA</h5>
-              <!-- <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk
-                of the card's content.
-              </p> -->
-              <!-- <a href="#!" class="btn btn-primary">Button</a> -->
-            </div>
-          </div>
+    <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+      <!-- Controls -->
+      <div class="d-flex justify-content-center mb-4">
+        <div class="section-title">
+          <h2>Our Clients</h2>
         </div>
       </div>
+      <!-- Inner -->
+      <div class="carousel-inner py-4">
+        <!-- Single item -->
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="card">
+                  <img src="assets/img/clients/precision1.jpg" class="card-img-top" alt="Waterfall" />
+                  <div class="card-body">
+                    <br><br><br><br>
+                    <h5 class="card-title">Precision Air</h5>
+
+                    <!-- <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p> -->
+                    <!-- <a href="#!" class="btn btn-primary">Button</a> -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card">
+                  <img src="assets/img/clients/tzr2.png" class="card-img-top" alt="Sunset Over the Sea" />
+                  <div class="card-body">
+                    <br><br>
+                    <h5 class="card-title">TZR</h5>
+                    <!-- <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p> -->
+                    <!-- <a href="#!" class="btn btn-primary">Button</a> -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <div class="card">
+                  <img src="assets/img/clients/gpsa 2.jpg" class="card-img-top" alt="Sunset over the Sea" />
+                  <div class="card-body">
+                    <h5 class="card-title">GPSA</h5>
+                    <!-- <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p> -->
+                    <!-- <a href="#!" class="btn btn-primary">Button</a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+      <!-- Inner -->
     </div>
-  </div>
-
-  
-
- 
-</div>
-<!-- Inner -->
-</div>
-<!-- Carousel wrapper -->
+    <!-- Carousel wrapper -->
 
     <!-- ======= About Lists Section ======= -->
     <section class="about-lists">
@@ -401,45 +370,45 @@
           <h2>WHY US</h2>
         </div>
       </div>
-        <div class="row no-gutters">
+      <div class="row no-gutters">
 
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
-            <span>01</span>
-            <h4>Consulting</h4>
-            <p>We are a one-stop consulting firm with different solutions for your business needs.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
-            <span>02</span>
-            <h4>Skilled and Experienced</h4>
-            <p>We have got skilled and experience staff to serve you and available 24/7 hours for operations.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
-            <span>03</span>
-            <h4> Quality Service and Products</h4>
-            <p>We believe in offering quality services and products that exceed customer expectations.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
-            <span>04</span>
-            <h4>Customer's satisfication</h4>
-            <p>Our services and products are customized to meet customer satisfactions.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="400">
-            <span>05</span>
-            <h4>Sapiente Magnam</h4>
-            <p>Vitae dolorem in deleniti ipsum omnis tempore voluptatem. Qui possimus est repellendus est quibusdam</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="500">
-            <span>06</span>
-            <h4>Facilis Impedit</h4>
-            <p>Quis eum numquam veniam ea voluptatibus voluptas. Excepturi aut nostrum repudiandae voluptatibus corporis sequi</p>
-          </div>
-
+        <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
+          <span>01</span>
+          <h4>Consulting</h4>
+          <p>We are a one-stop consulting firm with different solutions for your business needs.</p>
         </div>
+
+        <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
+          <span>02</span>
+          <h4>Skilled and Experienced</h4>
+          <p>We have got skilled and experience staff to serve you and available 24/7 hours for operations.</p>
+        </div>
+
+        <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
+          <span>03</span>
+          <h4> Quality Service and Products</h4>
+          <p>We believe in offering quality services and products that exceed customer expectations.</p>
+        </div>
+
+        <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
+          <span>04</span>
+          <h4>Customer's satisfication</h4>
+          <p>Our services and products are customized to meet customer satisfactions.</p>
+        </div>
+
+        <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="400">
+          <span>05</span>
+          <h4>Sapiente Magnam</h4>
+          <p>Vitae dolorem in deleniti ipsum omnis tempore voluptatem. Qui possimus est repellendus est quibusdam</p>
+        </div>
+
+        <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="500">
+          <span>06</span>
+          <h4>Facilis Impedit</h4>
+          <p>Quis eum numquam veniam ea voluptatibus voluptas. Excepturi aut nostrum repudiandae voluptatibus corporis sequi</p>
+        </div>
+
+      </div>
 
       </div>
     </section><!-- End About Lists Section -->
@@ -677,9 +646,9 @@
       </div>
     </section><!-- End Our Portfolio Section -->
 
-    
 
-    
+
+
     <!-- ======= Contact Us Section ======= -->
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
@@ -814,11 +783,9 @@
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-<!-- MDB -->
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"
-></script>  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>

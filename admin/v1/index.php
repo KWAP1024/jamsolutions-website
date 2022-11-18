@@ -42,7 +42,28 @@ include('./head.php');
                         <i class="ri-camera-switch-line"></i>
                       </div>
                       <div class="ps-3">
-                        <h6>145</h6>
+                        <h6>
+                          <?php
+                          $query = "select count(id) from carousel";
+                          $userid = mysqli_query($conn, $query);
+                          if ($userid) {
+                            while ($row = mysqli_fetch_assoc($userid)) {
+                            }
+                            $query2 = "select count(id) from carousel";
+                            $job = mysqli_query($conn, $query2);
+                            if ($job) {
+                              $row2 = mysqli_fetch_array($job);
+                              if ($row2) {
+                                echo $row2[0];
+                              } else {
+                                echo "No User";
+                              }
+                            } else {
+                              echo "Query failed";
+                            }
+                          }
+                          ?>
+                        </h6>
                       </div>
                     </div>
                   </div>
