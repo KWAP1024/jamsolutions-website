@@ -23,12 +23,6 @@
       </a>
     </li>
 
-    <li class="nav-item">
-      <a class="nav-link " href="team.php">
-        <i class="bi bi-grid"></i>
-        <span>Team</span>
-      </a>
-    </li>
 
     <li class="nav-item">
       <a class="nav-link " href="project.php">
