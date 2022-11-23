@@ -17,7 +17,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link " href="clients.php">
+      <a class="nav-link " href="client.php">
         <i class="bi bi-grid"></i>
         <span>Clients</span>
       </a>
