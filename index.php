@@ -9,6 +9,10 @@ $result = mysqli_query($conn, $query);
 // Clients
 $client = "SELECT * FROM client";
 $clientquery = mysqli_query($conn, $client);
+
+// Project
+$project = "SELECT * FROM project";
+$projectquery = mysqli_query($conn, $project);
 ?>
 
 <!DOCTYPE html>
@@ -81,7 +85,7 @@ $clientquery = mysqli_query($conn, $client);
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#portfolio">Projects</a></li> -->
+          <li><a class="nav-link scrollto" href="#portfolio">Projects</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
@@ -117,8 +121,6 @@ $clientquery = mysqli_query($conn, $client);
         <?php
         }
         ?>
-
-
 
         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
           <!-- <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span> -->
@@ -466,7 +468,7 @@ $clientquery = mysqli_query($conn, $client);
     </section>
 
     <!-- ======= Our Portfolio Section ======= -->
-    <!-- <section id="portfolio" class="portfolio section-bg">
+    <section id="portfolio" class="portfolio section-bg">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="section-title">
@@ -485,6 +487,31 @@ $clientquery = mysqli_query($conn, $client);
         </div>
 
         <div class="row portfolio-container">
+
+          <?php
+          while ($ret = mysqli_fetch_array($projectquery)) {
+            $bighead = $ret['bighead'];
+            $smallhead = $ret['smallhead'];
+            $photo = $ret['photo'];
+          ?>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img style="width: 10cm; height: 7cm;" src="./admin/v1/project/<?php echo $photo ?>" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4><?php echo $bighead ?></h4>
+                  <p><?php echo $smallhead ?></p>
+                  <div class="portfolio-links">
+                    <a href="./admin/v1/project/<?php echo $photo ?>" data-gallery="portfolioGallery" class="portfolio-lightbox" title="<?php echo $bighead ?>"><i class="bi bi-plus"></i></a>
+                    <a href="portfolio-details.php" title="More Details"><i class="bi bi-link"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <?php
+          }
+          ?>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
@@ -615,7 +642,7 @@ $clientquery = mysqli_query($conn, $client);
         </div>
 
       </div>
-    </section> -->
+    </section>
 
 
 
