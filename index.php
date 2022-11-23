@@ -746,7 +746,7 @@ $clientquery = mysqli_query($conn, $client);
         &copy; Copyright <strong><span>JAMSolutions</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Designed and Maintained by <a href="#">JAMSolutions</a>
+        Designed and Maintained by <a href="">JAMSolutions</a>
       </div>
     </div>
   </footer><!-- End Footer -->

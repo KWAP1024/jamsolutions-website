@@ -6,7 +6,7 @@
     <div class="credits">
       Designed by <a href="">Jam Solutions</a>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
