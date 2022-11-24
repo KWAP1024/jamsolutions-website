@@ -56,7 +56,6 @@ include('./head.php');
                                     <label class="col-sm-2 col-form-label">Project Category</label>
                                     <div class="col-sm-10">
                                         <select required name="category" class="form-select" aria-label="Default select example">
-                                            <!-- <option selected>Open this select menu</option> -->
                                             <option value="">---</option>
                                             <option value="website">Website</option>
                                             <option value="webapp">Web Application</option>
@@ -83,7 +82,69 @@ include('./head.php');
             </div>
         </section>
 
-    </main><!-- End #main -->
+        <!-- Displaying The Carousels -->
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Available Projects</h5>
+
+                            <?php
+                            $query = "SELECT * FROM project";
+                            $result = mysqli_query($conn, $query);
+                            ?>
+
+                            <table class="table datatable table-stripped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Big Head</th>
+                                        <th scope="col">Small Head</th>
+                                        <th scope="col">Photo</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <?php
+                                    $fo = 1;
+                                    while ($ret = mysqli_fetch_array($result)) {
+                                        $bighead = $ret['bighead'];
+                                        $smallhead = $ret['smallhead'];
+                                        $category = $ret['category'];
+                                        $photo = $ret['photo'];
+                                    ?>
+
+                                        <tr>
+                                            <th scope="row"><?php echo $fo++; ?></th>
+                                            <td><?php echo $bighead ?></td>
+                                            <td><?php echo $smallhead ?></td>
+                                            <td> <img style="width: 3cm;" src="../v1/project/<?php echo $photo ?>" alt="" srcset=""></td>
+                                            <td><?php echo $category ?></td>
+                                            <td>
+                                                <a href="editproject.php?id=<?php echo $ret['id']; ?>" class="btn btn-success"><i class="bi bi-pencil-fill"></i></a>
+                                                <a href="deleteproject.php?id=<?php echo $ret['id']; ?>" class="btn btn-danger">
+                                                    <i class="bi bi-trash-fill"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <?php
     include('./footer.php');
