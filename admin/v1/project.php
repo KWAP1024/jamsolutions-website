@@ -15,7 +15,7 @@ include('./head.php');
 
     <main id="main" class="main">
 
-        <div class="pagetitle">            
+        <div class="pagetitle">
         </div>
 
         <section class="section">
@@ -49,6 +49,20 @@ include('./head.php');
                                     <label for="inputNumber" class="col-sm-2 col-form-label">File Upload</label>
                                     <div class="col-sm-10">
                                         <input required class="form-control" type="file" name="photo" id="formFile">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-sm-2 col-form-label">Project Category</label>
+                                    <div class="col-sm-10">
+                                        <select required name="category" class="form-select" aria-label="Default select example">
+                                            <!-- <option selected>Open this select menu</option> -->
+                                            <option value="">---</option>
+                                            <option value="website">Website</option>
+                                            <option value="webapp">Web Application</option>
+                                            <option value="mobileapp">Mobile App</option>
+                                            <option value="networking">Networking</option>
+                                        </select>
                                     </div>
                                 </div>
 

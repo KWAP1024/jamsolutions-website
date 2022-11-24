@@ -2,13 +2,14 @@
 if (isset($_POST['go'])) {
     $bighead = $_POST['bighead'];
     $smallhead = $_POST['smallhead'];
+    $category = $_POST['category'];
 
     $file = $_FILES["photo"]["name"];
     $path = $_FILES['photo']['tmp_name'];
     $folder = "project/";
     $photo = str_replace(" ","-",$file);
 
-    $adduser = "INSERT INTO project (bighead,smallhead,photo) VALUES('$bighead','$smallhead','$photo');";
+    $adduser = "INSERT INTO project (bighead,smallhead,photo,category) VALUES('$bighead','$smallhead','$photo','$category');";
 
     $query = mysqli_query($conn, $adduser);
 
