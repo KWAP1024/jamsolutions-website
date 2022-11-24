@@ -8,14 +8,14 @@ if (isset($_POST['go'])) {
     $folder = "carousel/";
     $photo = str_replace(" ", "-", $file);
 
-    $adduser = "INSERT INTO carousel (bigtext,explaintext,photo) VALUES('$bigtext','$explaintext','$photo');";
+    $query = "UPDATE carousel SET bigtext='$bigtext', explaintext='$explaintext', photo='$photo' WHERE id ='$id' ";
 
-    $query = mysqli_query($conn, $adduser);
+    $kaka = mysqli_query($conn, $query);
 
-    if ($query) {
+    if ($kaka) {
         move_uploaded_file($path, $folder . $photo);
-        echo "Photo Uploaded Successfully";
+        echo "Carousel Updated Successfully";
     } else {
-        echo "Failed To Upload Photo";
+        echo "Failed To Update Carousel";
     }
 }

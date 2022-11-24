@@ -15,7 +15,7 @@ include('./head.php');
 
     <main id="main" class="main">
 
-        <div class="pagetitle">            
+        <div class="pagetitle">
         </div>
 
         <section class="section">
@@ -63,7 +63,68 @@ include('./head.php');
             </div>
         </section>
 
-    </main><!-- End #main -->
+        <!-- Displaying The Carousels -->
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Available Carousels</h5>
+
+                            <?php
+                            $query = "SELECT * FROM carousel";
+                            $result = mysqli_query($conn, $query);
+                            ?>
+
+                            <table class="table datatable table-stripped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Big Text</th>
+                                        <th scope="col">Explanation Text</th>
+                                        <th scope="col">Photo</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <?php
+                                    $fo = 1;
+                                    while ($ret = mysqli_fetch_array($result)) {
+                                        $bigtext = $ret['bigtext'];
+                                        $explaintext = $ret['explaintext'];
+                                        $photo = $ret['photo'];
+                                    ?>
+
+                                        <tr>
+                                            <th scope="row"><?php echo $fo++; ?></th>
+                                            <td><?php echo $bigtext ?></td>
+                                            <td><?php echo $explaintext ?></td>
+                                            <td> <img style="width: 3cm;" src="../v1/carousel/<?php echo $photo ?>" alt="" srcset=""></td>
+                                            <td>
+                                                <a href="editcarousel.php?id=<?php echo $ret['id']; ?>" class="btn btn-success"><i class="bi bi-pencil-fill"></i></a>
+                                                <a href="deletecarousel.php?id=<?php echo $ret['id']; ?>" class="btn btn-danger">
+                                                    <i class="bi bi-trash-fill"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
 
     <?php
     include('./footer.php');
