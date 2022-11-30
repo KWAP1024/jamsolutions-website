@@ -385,7 +385,7 @@ $projectquery = mysqli_query($conn, $project);
       </div>
 
       </div>
-    </section><!-- End About Lists Section -->
+    </section>
 
     <!-- ======= Our Team Section ======= -->
     <section id="team" class="team">
