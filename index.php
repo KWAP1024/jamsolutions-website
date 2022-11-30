@@ -583,11 +583,11 @@ $projectquery = mysqli_query($conn, $project);
         </div>
 
       </div>
-    </section><!-- End Contact Us Section -->
+    </section>
 
-  </main><!-- End #main -->
+  </main>
 
-  <!-- ======= Footer ======= -->
+  
   <footer id="footer">
     <div class="footer-top">
       <div class="container">
