@@ -206,7 +206,7 @@ $projectquery = mysqli_query($conn, $project);
                 <p>Customer
                   Focus</p>
               </strong>
-              <p>You need only a one-call for us to access you.</p>
+              <p>You need only a one-call for us to access you. With us, you are saved.</p>
             </div>
           </div>
 
