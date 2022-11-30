@@ -1,1 +1,3 @@
-template owned by JAM Solutions
+#Jam_Solutions
+
+This project is owned by JAM Solutions
