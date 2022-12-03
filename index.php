@@ -22,10 +22,48 @@ $projectquery = mysqli_query($conn, $project);
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>JAMSolutions</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
+  <title>JAM Solutions Tanzania</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name='robots' content='max-image-preview:large' />
+  <meta content="JamSolutions,jamsolutions,JamSolutions,JamSolution.it,Tanzania,Ict Tanzania,tanzania,tansania,Computer Tanzania,software Tanzania, websites Tanzania, application Tanzania, Mobile applications Tanzania,institute Tanzania,Nuru Yakubu,Gilbert Herman, Dar es salaam,Tanzania,Mikocheni,Africa, Club 101, Best IT, Security,Network, Computer,online exam, SoftNet Partners, Cisco, Microsoft, Server, Huawei, VMware, Geofrey Ritte,Government,website,Tanzania,Portal,Tourism,investment,online service , Tovuti,serikali,Tanzania,Portal,utalii,uwekeaji,huduma mtandao,jamhuri, HID,Vodacom ekyc,michezo ya watoto wa wadogo, tanzania passport, cisco ise features and benefits, cisco s100v, top 100 mid sized Compannies tanzania, immigration tanzania new passport, cisco appliance, call center electronic solutions,electronics devices Tanzania,Hotel bookings & Accommodation Tanzania,Train Spare Parts:,Catering Services,Regali Aziendali, Gadget Promozionali, Articoli Pubblicitari gadget,gadget
+        promozionali,oggettistica pubblicitaria,oggettistica regali aziendali,business
+        promotional items,imprinted promotional products,logo merchandise,promotional
+        items,corporate gift s,gadgets,business gifts,promotional gifts,business
+        promotional items,pubblicit,regali aziendali,articoli promozionali,idee
+        promozionali,shop,promotional,gift,catalogo,incentivi,shopping,fazzolettini,abbigliamento,busteplastica,palloni,Tshirt,radio,elettronica,pelletteria,
+        agende,oro argento,preziosi,accessori,portachiavi,penne,accendini,borse,
+        valigeria,ufficio,orologi,ombrelli,ombrelloni,misure metriche,blocchi
+        memo,rubriche,calendari,calendari da tavolo,arti grafiche,campagne
+        pubblicitarie,cartelli pubblicitari,cartelloni pubblicitari,cartellonistica,cartellonistica
+        pubblicitaria,cataloghi comunicazione,comunicazione pubblicitaria,web,depliant,depliants,design,distribuzione
+        oggettistica,totem,espositori,espositori pubblicitari,etichette,etichette
+        adesive,eventi,grafica,grafica 3d,grafica digitale,grafica pubblicitaria,grafici,grafici
+        pubblicitari,grafico pubblicitaria,immagine coordinata,immagine pubblicitaria,Tourist and Camping Activities,Tourist and Camping Activities. Tanzania,Tailoring, Fashion and Modelling Tanzania,medical laboratory equipment Tanzania,medical supply products Tanzania,health care supplies companies Tanzania,medical equipment supply companyTanzania,medical laboratory supplies Tanzania,best health devices Tanzania,medical care supplies Tanzania,health medical equipment Tanzania,medical supplies supplier Tanzania,quality medical equipment Tanzania,hospital devices Tanzania,dental medical supplies Tanzania,best medical devices Tanzania,the medical supply Tanzania,medic medical supplies,medical medical supplies,medical supplies suppliers,pro medical equipment,hospital medical devices,best care medical supply,medical service equipment,dental medical equipment,poverty reduction, education, agriculture, mining, tourism, trade, industries, health, poverty reduction, water environment, women development, private sector development, science and technology" name="keywords">
+   <meta name="description" content="Today’s world operate in the integration-of-things that require a very strong ICT software and hardware. At JAM Solutions we have both the best ICT software and hardware solutions perfect for your daily business operations."/>
+<meta name="robots" content="index,follow,max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<meta name="googlebot" content="index,follow" />
+<meta name="googlebot-news" content="index,follow" />
+<meta name="slurp" content="index,follow" />
+<meta name="msnbot" content="index,follow" />
+<link rel="canonical" href="https://jamsolutions.co.tz/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="BestSoftware Solutions In TANZANIA - JamSolutions" />
+<meta property="og:description" content="JamSolutions is a medical equipment supplier across TANZANIA. We provide new technology to our clients, advancing health care in the markets we serve." />
+<meta property="og:url" content="https://JamSolutions.co.tz/" />
+<meta property="og:site_name" content="JamSolutions Tanzania" />
+<meta property="og:updated_time" content="2022-08-02T05:58:41+00:00" />
+<meta property="video:duration" content="20" />
+<meta property="ya:ovs:upload_date" content="2022-09-08" />
+<meta property="ya:ovs:allow_embed" content="true" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="BestSoftware Solutions Supplier In TANZANIA - JamSolutions" />
+<meta name="twitter:description" content="JAM Solutions Co Ltd is a consulting firm that was incorporated in January 2013. Our existence is highly motivated by the quest to serve our clients with all business solutions under the same roof. We are very aware how the running of business operations could be hectic especially if you have to deal with different government institutions and offices as well as suppliers." />
+<meta name="twitter:label1" content="Written by" />
+<meta name="twitter:data1" content="admin" />
+<meta name="twitter:label2" content="Time to read" />
+<meta name="twitter:data2" content="25 minutes" />
+<meta name="author" content="Kwayu Mmari" />
   <!-- Favicons -->
   <link href="assets/img/favicon.ico" rel="icon">
   <link href="assets/img/favicon.ico" rel="apple-touch-icon">
@@ -60,7 +98,7 @@ $projectquery = mysqli_query($conn, $project);
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.co.tz">info@jamsolutions.co.tz</a>
-        <i class="bi bi-phone-fill phone-icon"></i> +255 755 530 328 / 714 932 225
+        <i class="bi bi-phone-fill phone-icon"></i> +255 755 530 328
       </div>
       <div class="social-links d-none d-md-block">
         <a target="_blank" href="https://twitter.com/SolutionsJam" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -85,11 +123,11 @@ $projectquery = mysqli_query($conn, $project);
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Projects</a></li>
+          <!--<li><a class="nav-link scrollto" href="#portfolio">Projects</a></li>-->
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <!--<i class="bi bi-list mobile-nav-toggle"></i>-->
       </nav><!-- .navbar -->
 
     </div>
@@ -372,14 +410,14 @@ $projectquery = mysqli_query($conn, $project);
 
         <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="400">
           <span>05</span>
-          <h4>Sapiente Magnam</h4>
-          <p>Vitae dolorem in deleniti ipsum omnis tempore voluptatem. Qui possimus est repellendus est quibusdam</p>
+          <h4>Skilled software engineers</h4>
+          <p>We have highly skilled engineers with excellent technical knowledge and experience in using latest softwares</p>
         </div>
 
         <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="500">
           <span>06</span>
-          <h4>Facilis Impedit</h4>
-          <p>Quis eum numquam veniam ea voluptatibus voluptas. Excepturi aut nostrum repudiandae voluptatibus corporis sequi</p>
+          <h4>Years of experience</h4>
+          <p>In more than 16 years of IT outsourcing, we have gained experience in a wide spectrum of technologies, industries, and application types.</p>
         </div>
 
       </div>
@@ -402,8 +440,24 @@ $projectquery = mysqli_query($conn, $project);
             <div class="member">
               <div class="pic"><img src="assets/img/team/person1.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Walter White</h4>
+                <h4>John Machonchoryo</h4>
                 <span>Chief Executive Officer</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="pic"><img src="assets/img/team/person1.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Adam Juma</h4>
+                <span>Accountant</span>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -446,80 +500,14 @@ $projectquery = mysqli_query($conn, $project);
             </div>
           </div>
 
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <div class="pic"><img src="assets/img/team/person1.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
         </div>
 
       </div>
     </section>
 
-    <!-- ======= Our Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="section-title">
-          <h2>Our Projects</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-website">Websites</li>
-              <li data-filter=".filter-webapp">Web Apps</li>
-              <li data-filter=".filter-mobileapp">Mobile Apps</li>
-              <li data-filter=".filter-networking">Networking</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container">
-
-          <?php
-          while ($ret = mysqli_fetch_array($projectquery)) {
-            $bighead = $ret['bighead'];
-            $smallhead = $ret['smallhead'];
-            $photo = $ret['photo'];
-            $category = $ret['category'];
-          ?>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-<?php echo $category ?>">
-              <div class="portfolio-wrap">
-                <img style="width: 10cm; height: 7cm;" src="./admin/v1/project/<?php echo $photo ?>" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4><?php echo $bighead ?></h4>
-                  <p><?php echo $smallhead ?></p>
-                  <div class="portfolio-links">
-                    <a href="./admin/v1/project/<?php echo $photo ?>" data-gallery="portfolioGallery" class="portfolio-lightbox" title="<?php echo $bighead ?>"><i class="bi bi-plus"></i></a>
-                    <!-- <a href="portfolio-details.php" title="More Details"><i class="bi bi-link"></i></a> -->
-                    <a href="" title="More Details"><i class="bi bi-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          <?php
-          }
-          ?>
-
-        </div>
-
-      </div>
-    </section>
+    
 
     <!-- ======= Contact Us Section ======= -->
     <section id="contact" class="contact">
@@ -594,8 +582,8 @@ $projectquery = mysqli_query($conn, $project);
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <h3>JAMSolutions</h3>
-            <p>
+            <h3>JAM Solutions</h3>
+            <p style="color: white">
               Classic Mall, Kibao cha shule, Dar es Salaam Tanzania<br><br>
               <strong>Phone:</strong> +255 755 530 328 / +255 714 932 225+<br>
               <strong>Email:</strong> info@jamsolutions.co.tz<br>
@@ -644,10 +632,10 @@ $projectquery = mysqli_query($conn, $project);
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>JAMSolutions</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>JAM Solutions</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Designed and Maintained by <a href="">JAMSolutions</a>
+        Designed and Maintained by <a href="">JAM Solutions</a>
       </div>
     </div>
   </footer><!-- End Footer -->
