@@ -350,8 +350,8 @@ $projectquery = mysqli_query($conn, $project);
               ?>
 
                 <div class="col-lg-4 d-none d-lg-block">
-                  <div class="card">
-                    <img style="width: 100%; height: 250px;" src="./admin/v1/client/<?php echo $photoclient ?>" class="card-img-top" alt="<?php echo $name . "'s Photo" ?>" />
+                  <div class="card" style="align-items: center;">
+                    <img style="width: 80%; height: 200px;" src="./admin/v1/client/<?php echo $photoclient ?>" class="card-img-top" alt="<?php echo $name . "'s Photo" ?>" />
                     <div class="card-body">
                       <h5 class="card-title"><?php echo $name ?></h5>
                     </div>
@@ -371,7 +371,7 @@ $projectquery = mysqli_query($conn, $project);
       </div>
       <!-- Inner -->
     </div>
-    
+
     <section class="about-lists">
       <div class="container">
         <div class="section-title">
