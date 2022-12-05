@@ -63,7 +63,7 @@ $projectquery = mysqli_query($conn, $project);
 <meta name="twitter:data1" content="admin" />
 <meta name="twitter:label2" content="Time to read" />
 <meta name="twitter:data2" content="25 minutes" />
-<meta name="author" content="Kwayu Mmari" />
+<meta name="author" content="JAM Solution" />
   <!-- Favicons -->
   <link href="assets/img/favicon.ico" rel="icon">
   <link href="assets/img/favicon.ico" rel="apple-touch-icon">
@@ -131,9 +131,9 @@ $projectquery = mysqli_query($conn, $project);
       </nav><!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <!-- ======= Hero Section ======= -->
+
   <section id="hero">
     <div class="hero-container">
       <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
@@ -351,7 +351,7 @@ $projectquery = mysqli_query($conn, $project);
 
                 <div class="col-lg-4 d-none d-lg-block">
                   <div class="card">
-                    <img style="width: 100%; height: 200px;" src="./admin/v1/client/<?php echo $photoclient ?>" class="card-img-top" alt="<?php echo $name . "'s Photo" ?>" />
+                    <img style="width: 100%; height: 250px;" src="./admin/v1/client/<?php echo $photoclient ?>" class="card-img-top" alt="<?php echo $name . "'s Photo" ?>" />
                     <div class="card-body">
                       <h5 class="card-title"><?php echo $name ?></h5>
                     </div>
@@ -361,8 +361,6 @@ $projectquery = mysqli_query($conn, $project);
               <?php
               }
               ?>
-
-
             </div>
           </div>
         </div>
@@ -373,9 +371,7 @@ $projectquery = mysqli_query($conn, $project);
       </div>
       <!-- Inner -->
     </div>
-    <!-- Carousel wrapper -->
-
-    <!-- ======= About Lists Section ======= -->
+    
     <section class="about-lists">
       <div class="container">
         <div class="section-title">
@@ -436,7 +432,7 @@ $projectquery = mysqli_query($conn, $project);
 
         <div class="row">
 
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+          <!-- <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
             <div class="member">
               <div class="pic"><img src="assets/img/team/person1.png" class="img-fluid" alt=""></div>
               <div class="member-info">
@@ -450,8 +446,8 @@ $projectquery = mysqli_query($conn, $project);
                 </div>
               </div>
             </div>
-          </div>
-          
+          </div> -->
+
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
               <div class="pic"><img src="assets/img/team/person1.png" class="img-fluid" alt=""></div>
@@ -500,14 +496,14 @@ $projectquery = mysqli_query($conn, $project);
             </div>
           </div>
 
-          
+
 
         </div>
 
       </div>
     </section>
 
-    
+
 
     <!-- ======= Contact Us Section ======= -->
     <section id="contact" class="contact">
@@ -575,7 +571,7 @@ $projectquery = mysqli_query($conn, $project);
 
   </main>
 
-  
+
   <footer id="footer">
     <div class="footer-top">
       <div class="container">
