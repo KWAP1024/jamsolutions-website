@@ -260,13 +260,11 @@ $projectquery = mysqli_query($conn, $project);
                 mutual beneficial relationships.</p>
             </div>
           </div>
-
+          
         </div>
-
       </div>
     </section>
 
-    <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
@@ -328,7 +326,7 @@ $projectquery = mysqli_query($conn, $project);
       </div>
     </section><!-- End Services Section -->
 
-    <!-- Carousel wrapper -->
+
     <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
       <!-- Controls -->
       <div class="d-flex justify-content-center mb-4">
@@ -336,7 +334,7 @@ $projectquery = mysqli_query($conn, $project);
           <h2>Our Clients</h2>
         </div>
       </div>
-      <!-- Inner -->
+
       <div class="carousel-inner py-4">
         <!-- Single item -->
         <div class="carousel-item active">
@@ -364,9 +362,6 @@ $projectquery = mysqli_query($conn, $project);
             </div>
           </div>
         </div>
-
-
-
 
       </div>
       <!-- Inner -->
